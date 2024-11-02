@@ -1,6 +1,4 @@
-/* App.css */
 
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +12,6 @@ body {
   padding: 20px;
 }
 
-/* Page Header */
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -28,7 +25,6 @@ h1:hover {
   color: #ffb74d;
 }
 
-/* Button Styles */
 button {
   background-color: #ffa726;
   color: #1e1e1e;
@@ -55,7 +51,6 @@ button:active {
   transform: translateY(0);
 }
 
-/* Container for Monaco Editor and iframe */
 .pane {
   display: flex;
   justify-content: center;
@@ -75,7 +70,6 @@ iframe {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Monaco Editor Container */
 .monaco-editor {
   width: 100%;
   height: 400px;
@@ -85,7 +79,6 @@ iframe {
   background-color: #1e1e1e;
 }
 
-/* Editor Container */
 .editor-container {
   padding: 10px;
   margin-top: 20px;
@@ -94,7 +87,6 @@ iframe {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Code Tabs */
 button.active {
   background-color: #ff9800;
   color: white;
@@ -106,7 +98,6 @@ button:disabled {
   color: #bdbdbd;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -120,7 +111,6 @@ button:disabled {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Hover effect for output iframe */
 .pane iframe:hover {
   transform: scale(1.02);
   transition: transform 0.3s ease-in-out;
