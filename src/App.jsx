@@ -1,19 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MonacoEditor from './Editor';
+import useLocalStorage from './hooks/useLocalStorage';
 
 const App = () => {
-  const [htmlCode, setHtmlCode] = useState('<h1>Hello, World!</h1>');
-  const [cssCode, setCssCode] = useState('h1 { color: blue; }');
-  const [jsCode, setJsCode] = useState('console.log("Hello, World!");');
+  const [htmlCode, setHtmlCode] = useLocalStorage('html', '');
+  const [cssCode, setCssCode] = useLocalStorage('css', '');
+  const [jsCode, setJsCode] = useLocalStorage('javascript', '');
 
-  const [activeTab, setActiveTab] = useState('html');
-  const srcDoc = `
-  <html>
-   <body>${htmlCode}<body/>
-   <style>${cssCode}<style/>
-   <script>${jsCode}<script/>
-  <html/>
-  `
+  const [activeTab, setActiveTab] = useState('');
+  const [srcDoc, setSrcDoc] = useState('');
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setSrcDoc(`
+      <html>
+       <body>${htmlCode}</body>
+       <style>${cssCode}</style>
+       <script>${jsCode}</script>
+      <html/>
+      `);
+    }, 250);
+    return () => clearTimeout(timeoutId);
+
+  }, [htmlCode, cssCode, jsCode]);
 
   const handleHtmlChange = (value) => {
     setHtmlCode(value);

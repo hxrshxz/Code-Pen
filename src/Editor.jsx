@@ -20,7 +20,7 @@ const MonacoEditor = ({ value, onChange, language }) => {
         <div style={EDITOR_STYLE}>
             <Editor
                 theme="vs-dark"
-                language={language} // Pass the language prop
+                language={language}
                 height="400px"
                 defaultValue={value}
                 onChange={onChange}
