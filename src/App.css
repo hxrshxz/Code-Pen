@@ -1,0 +1,30 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  overflow-y: scroll;
+}
+
+body{
+  padding: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.pane{
+  margin: 10px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 400px;
+}
+
+button{
+  margin:10px;
+
+}
