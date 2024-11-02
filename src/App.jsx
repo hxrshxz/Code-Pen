@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import MonacoEditor from './Editor';
-import useLocalStorage from './hooks/useLocalStorage';
+// import useLocalStorage from './hooks/useLocalStorage';
 
 const App = () => {
-  const [htmlCode, setHtmlCode] = useLocalStorage('html', '');
-  const [cssCode, setCssCode] = useLocalStorage('css', '');
-  const [jsCode, setJsCode] = useLocalStorage('javascript', '');
+  const [htmlCode, setHtmlCode] = useState('');
+  const [cssCode, setCssCode] = useState('');
+  const [jsCode, setJsCode] = useState('');
 
   const [activeTab, setActiveTab] = useState('');
   const [srcDoc, setSrcDoc] = useState('');
